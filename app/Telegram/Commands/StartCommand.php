@@ -35,6 +35,8 @@ class StartCommand extends Command
         $name = $response['message']['from']['first_name'];    
         $text = 'Assalamu alaykum, ' .$name. ' Men ishlayapman, lekin qanday ishlayotganimni o\'zim bilmayman!'.chr(10).chr(10);    
         $this->replyWithMessage(compact('text'));
+        $text = "Yoshingiz ?";
+        $this->replyWithMessage(compact($text));
 
     }
 }

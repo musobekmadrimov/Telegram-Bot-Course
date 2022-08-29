@@ -40,6 +40,7 @@ return [
             'commands'            => [
                 App\Telegram\Commands\HelpCommand::class,
                 App\Telegram\Commands\StartCommand::class,
+                App\Telegram\Commands\AnyCommand::class,
             ],
         ],
 
