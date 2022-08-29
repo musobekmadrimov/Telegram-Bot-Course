@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TelegramController;
 use Illuminate\Support\Facades\Route;
 use Telegram\Bot\Laravel\Facades\Telegram;
 
@@ -18,9 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/vgsqgcqgryljrkpfgknlegqoujrzhovvqzchzxsgpbufreiveeeakbhciercvmsk/webhook', function(){
-    $update = Telegram::commandsHandler(true);
-});
+// Route::post('/vgsqgcqgryljrkpfgknlegqoujrzhovvqzchzxsgpbufreiveeeakbhciercvmsk/webhook', function(){
+//     $update = Telegram::commandsHandler(true);
+// });
+
+Route::post('/vgsqgcqgryljrkpfgknlegqoujrzhovvqzchzxsgpbufreiveeeakbhciercvmsk/webhook', [TelegramController::class, 'index']);
 
 Route::get('/setwebhook', function () {
 	$response = Telegram::setWebhook(['url' => 'https://telegrambot.upress.uz/vgsqgcqgryljrkpfgknlegqoujrzhovvqzchzxsgpbufreiveeeakbhciercvmsk/webhook']);
