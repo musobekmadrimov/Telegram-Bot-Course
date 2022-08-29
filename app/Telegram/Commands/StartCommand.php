@@ -18,7 +18,6 @@ class StartCommand extends Command
     /**
      * @var array Command Aliases
      */
-    protected $aliases = ['listcommands'];
 
     /**
      * @var string Command Description
