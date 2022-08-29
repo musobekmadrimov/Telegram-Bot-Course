@@ -8,7 +8,7 @@ use Telegram;
 /**
  * Class HelpCommand.
  */
-class HelpCommand extends Command
+class StartCommand extends Command
 {
     /**
      * @var string Command Name
